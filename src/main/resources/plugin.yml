@@ -1,0 +1,22 @@
+name: TestPlugin
+version: ${project.version}
+main: me.b0bbydev.testplugin.TestPluginMain
+api-version: 1.16
+authors: [b0bbydev]
+description: First plugin
+commands:
+  fly:
+    usage: /fly <player>
+    description: This command allows you to toggle a players flight.
+
+  godModeOn:
+    usage: /godModeOn
+    description: This command allows you to toggle godmode on.
+
+  godModeOff:
+    usage: /godModeOff
+    description: This command allows you to toggle godmode off.
+
+  fullFood:
+    usage: /fullFood
+    description: This command will fill the players hunger bar.
