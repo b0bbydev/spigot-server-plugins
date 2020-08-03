@@ -1,5 +1,6 @@
 package me.b0bbydev.testplugin.commands;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -17,6 +18,8 @@ public class FullFood implements CommandExecutor
             Player player = (Player) sender;
             // fill food bar.
             player.setFoodLevel(100);
+            // print message to chat box.
+            sender.sendMessage(ChatColor.GREEN + "Food has been filled!");
         }// end of if.
 
         return true;

@@ -9,8 +9,8 @@ package me.b0bbydev.testplugin;
 
 import me.b0bbydev.testplugin.commands.FullFood;
 import me.b0bbydev.testplugin.commands.GodModeOff;
-import me.b0bbydev.testplugin.commands.ToggleFly;
 import me.b0bbydev.testplugin.commands.GodModeOn;
+import me.b0bbydev.testplugin.commands.ToggleFly;
 import me.b0bbydev.testplugin.events.PlayerJoin;
 import me.b0bbydev.testplugin.events.PlayerLeave;
 import org.bukkit.plugin.java.JavaPlugin;
