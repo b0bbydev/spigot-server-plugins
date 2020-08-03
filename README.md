@@ -7,7 +7,7 @@ This was a project done for some self practice along with my interest in video g
 
 
 ## What It Includes
-A server ran on your localhost - which can be configured to allow players to connect. <a href="serversetup">see how here</a> (coming soon)
+A server ran on your localhost - which can be configured to allow players to connect. <a href="#serversetup">see how here</a> (coming soon)
 
 Some examples of how to use the <a href="https://www.spigotmc.org/wiki/spigot/">Spigot API</a> to modify/create features in Minecraft!
 
@@ -49,7 +49,7 @@ After entering the command, this should build the server.jar for you to use.
 After saving this ```'serverstart.bat'``` file, it can now be double-clicked and will start the server for you. You may have to agree to EULA on the first start-up. After agreeing, double-click your .bat file again, and the server should start again with no issues.
 
 
-Congratulations! You have set up a Minecraft server to operate on your localhost. In order for others to connect to it - <a href="serversetup">see here</a>.
+Congratulations! You have set up a Minecraft server to operate on your localhost. In order for others to connect to it - <a href="#serversetup">see here</a>.
 
 
 ## Server Setup (Remote)
