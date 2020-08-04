@@ -6,8 +6,8 @@ This project is an example of some entry level Java programming using Minecraft.
 This was a project done for some self practice along with my interest in video games. Minecraft is a great choice as it allows you to "visualize" your code quite quickly, as you make changes and modify your program. The <a href="https://hub.spigotmc.org/javadocs/spigot/">Spigot API Documentation</a> also makes it very user-friendly for developers to interact with.
 
 
-## What It Includes
-A server ran on your localhost - which can be configured to allow players to connect. <a href="#serversetup">see how here</a> (coming soon)
+## What The Project Includes
+How to run a server on your localhost - which can be configured to allow players to connect. <a href="#serversetup">see how here</a> (coming soon)
 
 Some examples of how to use the <a href="https://www.spigotmc.org/wiki/spigot/">Spigot API</a> to modify/create features in Minecraft!
 
