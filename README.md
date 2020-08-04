@@ -54,4 +54,14 @@ Congratulations! You have set up a Minecraft server to operate on your localhost
 
 ## Server Setup (Remote)
 <a id="serversetup"></a>
-Coming soon.
+In order to allow players to connect to the server hosted on your machine, you will need to know your external IP address. Keep in mind to only allow trusted players to join from this IP address. Your external IP can be found here https://www.whatismyip.com/.
+
+
+##### Portforwarding
+Minecraft uses port 25565, so the router needs to be setup to send any traffic on port 25565 to the computer that has the Minecraft server. In order to do this:
+* Navigate to your command prompt and enter the command ```ipconfig```
+* Take note of your IPv4 address and your default gateway
+* Go to your routers' settings by entering the default gateway into the address bar of a browser
+* Find your port forwarding settings and make a TCP & UDP rule, forwarding both starting and ending ports 25565 to your IPv4 address
+
+Congratulations! Players can now join your Minecraft server by connecting to your **External IP**.
