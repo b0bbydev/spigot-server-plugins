@@ -4,13 +4,9 @@
  * Purpose: Practice with Spigot plugins.
  */
 
-
 package me.b0bbydev.testplugin;
 
-import me.b0bbydev.testplugin.commands.FullFood;
-import me.b0bbydev.testplugin.commands.GodModeOff;
-import me.b0bbydev.testplugin.commands.GodModeOn;
-import me.b0bbydev.testplugin.commands.ToggleFly;
+import me.b0bbydev.testplugin.commands.*;
 import me.b0bbydev.testplugin.events.PlayerJoin;
 import me.b0bbydev.testplugin.events.PlayerLeave;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -33,11 +29,11 @@ public final class TestPluginMain extends JavaPlugin
 
         // register the FullFood command
         this.getCommand("fullFood").setExecutor(new FullFood());
+
+        // register the kill command.
+        this.getCommand("kill").setExecutor(new KillTarget());
+
+        // register the teleport command
+        this.getCommand("tp").setExecutor(new Teleport());
     }// end of onEnable.
-
-    @Override
-    public void onDisable()
-    {
-
-    }// end of onDisable.
 }// end of class.

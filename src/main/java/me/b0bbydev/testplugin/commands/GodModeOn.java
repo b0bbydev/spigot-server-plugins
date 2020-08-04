@@ -19,7 +19,7 @@ public class GodModeOn implements CommandExecutor
             // toggle God Mode.
             player.setInvulnerable(true);
             // print message to chat box.
-            sender.sendMessage(ChatColor.RED + "God Mode enabled!");
+            sender.sendMessage(ChatColor.GREEN + "God Mode enabled!");
         }// end of if.
 
         return true;

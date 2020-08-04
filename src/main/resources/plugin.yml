@@ -20,3 +20,11 @@ commands:
   fullFood:
     usage: /fullFood
     description: This command will fill the players hunger bar.
+
+  kill:
+    usage: /kill <target>
+    description: This command allows you to kill yourself or another player.
+
+  tp:
+    usage: /tp <otherplayer> , /tp <player> <otherplayer>
+    description: This command will allow player to teleport to each other.

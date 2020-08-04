@@ -14,5 +14,4 @@ public class PlayerJoin implements Listener
         Player player = e.getPlayer();
         e.setJoinMessage(ChatColor.AQUA + "Welcome to the server! " + ChatColor.LIGHT_PURPLE + player.getDisplayName());
     }// end of onPlayerJoin method.
-
 }// end of class.
