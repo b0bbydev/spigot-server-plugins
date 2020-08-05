@@ -6,8 +6,8 @@ This project is an example of some entry level Java programming using Minecraft.
 This was a project done for some self practice along with my interest in video games. Minecraft is a great choice as it allows you to "visualize" your code quite quickly, as you make changes and modify your program. The <a href="https://hub.spigotmc.org/javadocs/spigot/">Spigot API Documentation</a> also makes it very user-friendly for developers to interact with.
 
 
-## What It Includes
-A server ran on your localhost - which can be configured to allow players to connect. <a href="#serversetup">see how here</a> (coming soon)
+## What The Project Includes
+How to run a server on your localhost - which can be configured to allow players to connect. <a href="#serversetup">see how here</a> (coming soon)
 
 Some examples of how to use the <a href="https://www.spigotmc.org/wiki/spigot/">Spigot API</a> to modify/create features in Minecraft!
 
@@ -54,4 +54,14 @@ Congratulations! You have set up a Minecraft server to operate on your localhost
 
 ## Server Setup (Remote)
 <a id="serversetup"></a>
-Coming soon.
+In order to allow players to connect to the server hosted on your machine, you will need to know your external IP address. Keep in mind to only allow trusted players to join from this IP address. Your external IP can be found here https://www.whatismyip.com/.
+
+
+##### Portforwarding
+Minecraft uses port 25565, so the router needs to be setup to send any traffic on port 25565 to the computer that has the Minecraft server. In order to do this:
+* Navigate to your command prompt and enter the command ```ipconfig```
+* Take note of your IPv4 address and your default gateway
+* Go to your routers' settings by entering the default gateway into the address bar of a browser
+* Find your port forwarding settings and make a TCP & UDP rule, forwarding both starting and ending ports 25565 to your IPv4 address
+
+Congratulations! Players can now join your Minecraft server by connecting to your **External IP**.
