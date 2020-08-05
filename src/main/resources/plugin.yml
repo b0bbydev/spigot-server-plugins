@@ -28,3 +28,7 @@ commands:
   tp:
     usage: /tp <otherplayer> , /tp <player> <otherplayer>
     description: This command will allow player to teleport to each other.
+
+  tpbow:
+    usage: /tpbow
+    description: Spawn a teleport bow.
