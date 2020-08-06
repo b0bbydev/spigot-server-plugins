@@ -32,3 +32,15 @@ commands:
   tpbow:
     usage: /tpbow
     description: Spawn a teleport bow.
+
+  fullHealth:
+    usage: /fullHealth
+    description: This command will fill the players health to full.
+
+  oneKOSword:
+    usage: /oneKOSword
+    description: This command gives the player a one-hit sword.
+
+  armorStand:
+    usage: /armorStand
+    description: This command will spawn a armorStand GUI.

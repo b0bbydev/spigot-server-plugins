@@ -7,10 +7,7 @@
 package me.b0bbydev.testplugin;
 
 import me.b0bbydev.testplugin.commands.*;
-import me.b0bbydev.testplugin.events.PlayerJoin;
-import me.b0bbydev.testplugin.events.PlayerLeave;
-import me.b0bbydev.testplugin.events.TPBowEvent;
-import me.b0bbydev.testplugin.events.TPBowOnSpawn;
+import me.b0bbydev.testplugin.events.*;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -56,25 +53,70 @@ public final class TestPluginMain extends JavaPlugin
 
         // register the teleport command
         this.getCommand("tp").setExecutor(new Teleport());
+
+        // register the FullHealth command.
+        this.getCommand("fullHealth").setExecutor(new FullHealth());
+
+        // register the OneKOSword command.
+        this.getCommand("oneKOSword").setExecutor(new OneKOSword(this));
     }// end of onEnable.
 
+
+    // make a method to give the player a tpbow.
     public void giveBow(Player player)
     {
-        // create a teleport bow and arrow object.
+        // create a bow and arrow object.
         ItemStack teleport_bow = new ItemStack(Material.BOW);
         ItemStack arrow = new ItemStack(Material.ARROW);
 
         // set the meta of the bow.
         ItemMeta meta = teleport_bow.getItemMeta();
+
+        // make the bow unbreakable.
         meta.setUnbreakable(true);
+
+        // set the name of the bow. - Which can be changed from config.yml.
         meta.setDisplayName(ChatColor.translateAlternateColorCodes('&', this.getConfig().getString("bow-name")));
 
         ArrayList<String> lore = new ArrayList<>();
+        // lore is sort of like the description of the weapon. - This can be changed from config.yml.
         lore.add(ChatColor.translateAlternateColorCodes('&', this.getConfig().getString("bow-description")));
+        // set the lore and ItemMeta.
         meta.setLore(lore);
         teleport_bow.setItemMeta(meta);
+
+        // make sure the bow can be fired infinitely.
         teleport_bow.addUnsafeEnchantment(Enchantment.ARROW_INFINITE, 999);
+
+        // add an arrow and the bow to players inventory.
         player.getInventory().addItem(arrow);
         player.getInventory().addItem(teleport_bow);
     }// end of giveBow method.
+
+
+    //make a method to give the player a one-hit sword.
+    public void giveSword(Player player)
+    {
+        // create a sword object.
+        ItemStack oneKOSword = new ItemStack(Material.NETHERITE_SWORD);
+
+        // set the meta of the sword.
+        ItemMeta meta = oneKOSword.getItemMeta();
+        // make it unbreakable.
+        meta.setUnbreakable(true);
+
+        // set the name of the bow.
+        meta.setDisplayName(ChatColor.DARK_RED + "One hitter bastard.");
+
+        ArrayList<String> lore = new ArrayList<>();
+        lore.add(ChatColor.BLUE + "Yes this sword is a beast...");
+        meta.setLore(lore);
+        oneKOSword.setItemMeta(meta);
+
+        // add a crazy enchantment.
+        oneKOSword.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 9999);
+
+        // add the sword to the players inventory.
+        player.getInventory().addItem(oneKOSword);
+    }// end of giveSword method.
 }// end of class.

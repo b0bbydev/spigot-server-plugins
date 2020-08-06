@@ -27,13 +27,18 @@ public class TPBowEvent implements Listener
         // setting the target location to the location off the arrow hit.
         Location location = e.getEntity().getLocation();
 
+        // remove the entity from the HitEvent.
         e.getEntity().remove();
 
+        // set the direction the player will face when getting to location.
         location.setYaw(player.getLocation().getYaw());
         location.setPitch(player.getLocation().getPitch());
 
+        // teleport player to location.
         player.teleport(location);
+        // play a sound when the player teleports.
         player.playSound(location, Sound.ENTITY_DRAGON_FIREBALL_EXPLODE, 1.0F, 1.0F);
+        // send a message to the chat box when the player teleports. - Message can be configured from config.yml.
         player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("teleported-message")));
     }// end of onBowShoot method.
 }// end of class.
